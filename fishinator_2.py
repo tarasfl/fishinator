@@ -79,6 +79,7 @@ class FishShop:
             fish_weight = find_closest_value(weight, sorted(weight_list, key=float))
             del list_of_fishies[weight_list.index(fish_weight)]
             total_price = self.fishies[name][0].price_in_uah_per_kilo * fish_weight
+            self.fishies.update({"name": list_of_fishies})   
             return (name, fish_weight, total_price)
         else:
             pass
