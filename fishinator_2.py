@@ -129,5 +129,24 @@ class FishShop:
                 buffer_list.append(i)
             elif i[1] < prev_value:
                 buffer_list.insert(0, i)
-                prev_value = i[1]
+                prev_value = i[4]
         return buffer_list
+
+
+    def get_fresh_fish_names_sorted_by_price(self) -> list(tuple()):
+        fish_list = [value for value in self.fishies.values()]
+        buffer_list = []
+        for i in fish_list:
+            buffer_list.extend(i)
+        fin_list = [(value.name, value.price_in_uah_per_kilo) for value in buffer_list]
+        buffer_list = []
+        prev_value = fin_list[0][1]
+        for i in fin_list:
+            if i[1] >= prev_value:
+                 buffer_list.append(i)
+            elif i[1] < prev_value:
+                buffer_list.insert(0, i)
+                prev_value = i[4]
+        return buffer_list
+            
+

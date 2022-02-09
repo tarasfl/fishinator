@@ -18,4 +18,4 @@ magazyn.add_fish(Fish("Petro", 17.9, date(2023, 1, 25), "Yerusalym", date(2007, 
 magazyn.add_fish(Fish("Petro", 17.9, date(2023, 1, 25), "Yerusalym", date(2007, 8, 14), 56, 98.1))
 print(magazyn.sell_fish("Petro", 90, 1))
 print(magazyn)
-print(magazyn.get_frozen_fish_names_sorted_by_price())
+print(magazyn.get_fresh_fish_names_sorted_by_price())
